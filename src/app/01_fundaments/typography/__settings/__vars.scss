@@ -1,0 +1,41 @@
+/**
+ *
+ * TYPOGRAPHY: VARS
+ *
+ */
+
+$fonts: (
+	'main': (
+		'normal': 'Zilla Slab',
+		'bold': ''
+	),
+	'special': (
+		'normal': 'Quicksand'
+	),
+	'titles': (
+		'normal': 'Quicksand'
+	)
+);
+
+$fontSizes: (
+	'inherit' : inherit,
+	'xxsmall' : 1.2rem,
+	'xsmall'  : 1.3rem,
+	'small'   : 1.4rem,
+	'medium'  : 1.8rem,
+	'large'   : 2rem,
+	'xlarge'  : 2.2rem,
+	'xxlarge' : 2.6rem,
+);
+
+$titleSizes: (
+	'inherit' : inherit,
+	'xxsmall' : 1.5rem,
+	'xsmall'  : 1.7rem,
+	'small'   : 1.9rem,
+	'medium'  : 2.2rem,
+	'large'   : 2.5rem,
+	'xlarge'  : 3.2rem,
+	'xxlarge' : 3.5rem,
+	'xxxlarge': 4.3rem
+);

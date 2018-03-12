@@ -1,0 +1,21 @@
+
+<div class="re">
+	<div class="re__inner">
+
+		<a (click)="prev()" class="re__navigation re__navigation--prev">&#9708;</a>
+		<a (click)="next()" class="re__navigation re__navigation--next">&#9708;</a>
+
+		<strong class="re__num">{{ step }}<span>/</span>{{ steps }}</strong>
+
+		<div class="re__main" *ngIf="current">
+
+			<h2 class="re__title wysiwyg" [innerHTML]="current.title | safeHTML" *ngIf="current.title"></h2>
+			<div class="re__body wysiwyg" [innerHTML]="current.body | safeHTML" *ngIf="current.body"></div>
+			<code class="re__regex" *ngIf="current.regex"><span>/</span><strong>{{ current.regex }}</strong><span>/</span><span class="re__flags" *ngIf="current.flags">{{ current.flags }}</span></code>
+			<code class="re__code" *ngIf="current.code" [innerHTML]="current.code | highlight:current.regex:current.flags"></code>
+			<div class="re__info wysiwyg" [innerHTML]="current.info | safeHTML" *ngIf="current.info"></div>
+
+		</div>
+
+	</div>
+</div>

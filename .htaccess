@@ -1,0 +1,8 @@
+# URL rewrite
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+    RewriteBase /
+    RewriteRule ^(.*)$ dist/$1 [L]
+
+</IfModule>

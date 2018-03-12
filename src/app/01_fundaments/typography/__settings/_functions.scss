@@ -1,0 +1,25 @@
+/**
+ *
+ * TYPOGRAPHY: FUNCTIONS
+ *
+ */
+
+@function font($face: main, $weight: 'normal') {
+
+	$font: map-get($fonts, quote($face));
+
+	@return map-get($font, quote($weight)), Helvetica, Arial, serif;
+
+}
+
+@function fontSize($size: 'medium') {
+
+	@return map-get($fontSizes, quote($size));
+
+}
+
+@function titleSize($size: 'medium') {
+
+	@return map-get($titleSizes, quote($size));
+
+}

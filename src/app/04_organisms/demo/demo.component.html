@@ -1,0 +1,25 @@
+
+<div class="demo" *ngIf="demo">
+	<div class="demo__inner">
+
+		<h2 class="demo__title" *ngIf="demo.title">{{ demo.title }}</h2>
+
+		<div class="demo__steps">
+
+			<div class="demo__body wysiwyg" [innerHTML]="demo.steps[step].body | safeHTML" *ngIf="demo.steps[step].body"></div>
+
+			<code class="demo__regex" *ngIf="demo.steps[step].regex"><span>/</span><strong>{{ demo.steps[step].regex | regex }}</strong><span>/</span><span class="demo__flags" *ngIf="demo.steps[step].flags">{{ demo.steps[step].flags }}</span></code>
+			<code class="demo__code" *ngIf="demo.code" [innerHTML]="demo.code | highlight:demo.steps[step].regex:demo.steps[step].flags"></code>
+
+			<div class="demo__info wysiwyg" [innerHTML]="demo.steps[step].info | safeHTML" *ngIf="demo.steps[step].info"></div>
+
+			<div class="demo__steps__nav">
+				<a (click)="prevStep()" *ngIf="step > 0" class="demo__steps__nav__link demo__steps__nav__link--prev">previous</a>
+				<a (click)="nextStep()" *ngIf="step < -1 + demo['steps'].length" class="demo__steps__nav__link demo__steps__nav__link--next">next</a>
+			</div>
+
+		</div>
+
+
+	</div>
+</div>

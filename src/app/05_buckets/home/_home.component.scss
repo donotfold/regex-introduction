@@ -1,0 +1,60 @@
+
+.home {
+
+	padding: 10rem 0 0 0;
+	max-width: section('small');
+	margin: 0 auto;
+
+}
+
+.home__inner {
+
+	text-align: center;
+
+}
+
+.home__title {
+
+	font-family: font('titles');
+	margin-bottom: gap('xsmall');
+
+}
+
+.home__body {
+
+	line-height: 1.4;
+
+}
+
+.home__navigation {
+
+	list-style: none;
+	margin: gap('small') 0 0 0;
+	padding: 0;
+
+}
+
+.home__navigation__item {
+
+	display: inline;
+	margin: 0 gap('small');
+}
+
+.home__navigation__link {
+
+	font-family: font('titles');
+	font-size: fontSize('xlarge');
+
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: color('action');
+	transition: color 250ms;
+
+	&:hover {
+
+		color: color('light');
+
+	}
+
+}

@@ -1,0 +1,111 @@
+
+.header {
+
+	height: 20rem;
+
+	.is-home & {
+
+		height: auto;
+
+	}
+
+}
+
+.header__inner {
+
+	padding: gap('small') gap('xxxsmall') 0 gap('xxxsmall');
+	text-align: center;
+
+	transform: scale(0.5) translateY(-50%);
+	transition: transform 1s;
+
+	cursor: pointer;
+
+	.is-home & {
+
+		transform: scale(1) translateY(0%);
+		cursor: default;
+
+	}
+
+}
+
+.header__title {
+
+	$textY: 110px;
+
+	display: block;
+	margin: 0 auto;
+	width: 624px;
+	height: 280px;
+
+	position: relative;
+
+	strong {
+
+		display: block;
+		width: 535px;
+		height: 337px;
+
+		position: absolute;
+		top: 0;
+		left: 50%;
+		z-index: 2;
+		transform: translateX(-50%);
+
+		background: url(../graphics/octopus.png) no-repeat 0 0 / contain;
+
+		text-align: left;
+		text-indent: -1000px;
+		overflow: hidden;
+
+		animation: header__octopus__float 4s ease-in-out infinite;
+
+	}
+
+	&:before {
+
+		display: block;
+		content: '';
+		width: 624px;
+		height: 165px;
+
+		position: absolute;
+		top: $textY;
+		left: 0;
+		z-index: 1;
+
+		background: url(../graphics/regex.png) no-repeat 0 0;
+
+	}
+
+	&:after {
+
+		display: block;
+		content: '';
+		width: 624px;
+		height: 165px;
+
+		position: absolute;
+		top: $textY;
+		left: 0;
+		z-index: 3;
+
+		background: url(../graphics/regex--broken.png) no-repeat 0 0;
+
+	}
+
+}
+
+.header__subtitle {
+
+	font-size: fontSize('large');
+	letter-spacing: 0.7rem;
+	text-transform: lowercase;
+
+	position: relative;
+	z-index: 4;
+
+}
+
+@keyframes header__octopus__float { 0% { transform: translateX(-50%) translateY(0px); } 50% { transform: translateX(-50%) translateY(5px); } 100% { transform: translateX(-50%) translateY(0px); }}

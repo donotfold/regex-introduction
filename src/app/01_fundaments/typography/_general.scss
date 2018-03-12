@@ -1,0 +1,100 @@
+/**
+ *
+ * TYPOGRAPHY: GENERAL
+ *
+ */
+
+html {
+
+	font-size: 10px;
+	-webkit-text-size-adjust: 100%;
+
+}
+
+body {
+
+	transition: font-size 100ms;
+
+	font-family: font('main');
+	font-size: fontSize('small');
+	font-weight: 300;
+	line-height: 1;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	text-rendering: optimizeLegibility;
+
+	@include media('small') {
+		font-size: fontSize('medium');
+	}
+
+	@include media('xlarge') {
+		font-size: fontSize('large');
+	}
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	font-family: font('titles');
+	font-weight: normal;
+
+}
+
+.wysiwyg {
+
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: fontSize('small');
+	line-height: 1.4;
+
+	a {
+
+		color: inherit;
+		text-decoration: underline;
+		font-weight: bold;
+
+	}
+
+	p {
+
+		margin-bottom: gap('xsmall');
+
+	}
+
+	h2 {
+
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: titleSize('large');
+		font-weight: bold;
+
+		margin-bottom: gap('xxxsmall');
+
+	}
+
+	h3 {
+
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: titleSize('medium');
+		font-weight: bold;
+		margin-bottom: gap('xxxsmall');
+
+	}
+
+	ul, ol {
+
+		margin: 0 0 gap('xsmall') 2rem;
+
+		li {
+
+			margin-top: gap('xxsmall');
+
+			&:first-child { margin-top: 0; }
+
+			@include media('small') { margin-top: gap('xxxsmall'); }
+
+		}
+
+	}
+
+}

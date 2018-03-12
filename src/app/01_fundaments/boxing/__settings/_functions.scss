@@ -1,0 +1,29 @@
+/**
+ *
+ * BOXING: FUNCTIONS
+ *
+ */
+
+@function section($size: 'xsmall') {
+	@return map-get($sections, $size);
+}
+
+@function gap($size: 'xsmall') {
+	@return map-get($gaps, $size);
+}
+
+@function make-it-px($value) {
+	@if is-px($value) {
+		@return $value;
+	}
+
+	@return strip-unit($value) * 10px;
+}
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@function is-px($value) {
+	@return index('px', unit($value)) != null;
+}

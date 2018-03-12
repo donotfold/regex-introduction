@@ -1,0 +1,178 @@
+
+$re-topspace: 6rem;
+
+.re {
+
+	padding: 0 gap('xxsmall') 60rem gap('xxsmall');
+
+}
+
+.re__inner {
+
+	max-width: section('medium');
+	margin: 0 auto;
+	padding: 6rem 0 2rem 0;
+	flex: 1 0 100%;
+
+	position: relative;
+
+}
+
+.re__navigation {
+
+	display: block;
+	position: absolute;
+	top: 0;
+
+	font-size: $re-topspace;
+	color: color('light');
+	transition: color 250ms;
+
+	&:hover {
+
+		color: color('action');
+
+	}
+
+}
+
+.re__navigation--prev {
+
+	left: 0;
+
+	transform: rotate(-90deg);
+
+}
+
+.re__navigation--next {
+
+	right: 0;
+
+	transform: rotate(90deg);
+
+}
+
+.re__num {
+
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 20rem;
+	left: 20rem;
+
+	font-size: fontSize('xlarge');
+	font-weight: normal;
+	text-align: center;
+	line-height: $re-topspace;
+
+	span { display: inline-block; padding: 0 4px; }
+
+}
+
+.re__title {
+
+	font-size: titleSize('large');
+
+}
+
+.re__main {
+
+	padding: gap('large');
+	background-color: color('neutrals-1');
+	border-radius: 2px;
+	color: color('dark');
+
+}
+
+.re__body, .re__info {
+
+	margin-bottom: 4rem;
+	line-height: 1.4;
+	font-size: 2rem;
+
+	blockquote { color: red; border-left: 2px solid red; margin-left: 0; padding-left: 2rem; }
+	blockquote strong { font-weight: bold; background-color: transparent; }
+
+}
+
+.re__code, .re__regex {
+
+	position: relative;
+
+	display: block;
+
+	white-space: pre-wrap;
+	white-space: pre-line;
+
+	font-size: 1.8rem;
+	font-family: monospace;
+	line-height: 1.4;
+
+	strong { background-color: color('light'); font-weight: normal; margin-right: 2px; margin-bottom: 1px; }
+
+}
+
+.re__regex {
+
+	border-bottom: 1px solid white;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+
+	&:before {
+
+		position: absolute;
+		top: 0;
+		right: 100%;
+
+		padding-right: gap('xsmall');
+
+		font-size: 12px;
+		text-align: right;
+		text-transform: uppercase;
+
+		content: 'REGEX';
+
+	}
+
+	span { opacity: 0.5; }
+
+}
+
+.re__flags {
+
+
+
+}
+
+.re__code {
+
+
+	&:before {
+
+		position: absolute;
+		top: 0;
+		right: 100%;
+
+		padding-right: gap('xsmall');
+
+		font-size: 12px;
+		text-align: right;
+		text-transform: uppercase;
+
+		content: 'DEMO';
+
+	}
+
+}
+
+.re__info {
+
+	border-top: 1px solid white;
+	padding-top: 2rem;
+	margin-top: 4rem;
+
+	code { font-weight: bold; }
+	strong { background-color: rgba(white, 0.8); font-weight: normal; margin-right: 2px; }
+	code strong { font-weight: bold; }
+
+}

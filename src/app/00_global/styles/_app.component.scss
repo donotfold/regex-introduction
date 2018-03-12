@@ -1,0 +1,15 @@
+
+.wrapper {
+
+	background: black url(../graphics/bg.jpg) no-repeat 50% -250px;
+	height: 100%;
+
+	transition: background-position 1200ms;
+
+	.is-home & {
+
+		background-position: 50% 0px;
+
+	}
+
+}

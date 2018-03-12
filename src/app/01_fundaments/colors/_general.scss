@@ -1,0 +1,26 @@
+/**
+ *
+ * COLORS: GENERAL
+ *
+ */
+
+body {
+
+	background: color('neutrals-8');
+	color: color('neutrals-0');
+
+}
+
+::selection {
+
+	background: color('neutrals-0');
+	color: color('neutrals-8');
+
+}
+
+::-moz-selection {
+
+	background: color('neutrals-0');
+	color: color('neutrals-8');
+
+}

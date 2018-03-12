@@ -1,0 +1,19 @@
+/**
+ *
+ * COLORS: FUNCTIONS
+ *
+ */
+
+@function color($name: false, $mod: false, $amount: 7) {
+
+	@if $mod == lighter {
+		@return lighten(map-get($colors, quote($name)), $amount);
+	}
+
+	@if $mod == darker {
+		@return darken(map-get($colors, quote($name)), $amount);
+	}
+
+	@return map-get($colors, quote($name));
+
+}

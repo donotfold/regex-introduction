@@ -1,0 +1,20 @@
+/**
+ *
+ * COLORS: INLINES
+ *
+ */
+
+// loop through the colors list (see settings)
+// and print the font color and background-color for each
+
+@each $colorName, $colorValue, $color in $colors {
+
+	.fc--#{$colorName} 			{ color: color(#{$colorName}); }
+	.fc--#{$colorName}-darker 	{ color: color(#{$colorName}, darker); }
+	.fc--#{$colorName}-lighter 	{ color: color(#{$colorName}, lighter); }
+
+	.bgc--#{$colorName} 		{ background-color: color(#{$colorName}); }
+	.bgc--#{$colorName}-darker 	{ background-color: color(#{$colorName}, darker); }
+	.bgc--#{$colorName}-lighter { background-color: color(#{$colorName}, lighter); }
+
+}

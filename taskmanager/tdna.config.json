@@ -1,0 +1,95 @@
+{
+  "general": {
+  	"framework": "angular",
+    "vhost": "",
+    "cleanPaths": [
+      "../src/assets"
+    ]
+  },
+  "tasks": {
+    "copy": {
+      "active": true,
+      "watchIt": true,
+      "cwd": "../src/app",
+      "src": [
+        "**/**/**/*.*",
+        "!**/**/**/*.{css,scss,sass,js,ts,coffee,php,html,twig,njk,blade,jpeg,jpg,gif,png,svg,ico}"
+      ],
+      "dest": "../src/assets"
+    },
+    "icons": {
+      "active": true,
+      "watchIt": true,
+      "cwd": "../src/app",
+      "src": [
+        "**/**/*icon*.svg",
+        "**/**/icons/*.svg"
+      ],
+      "dest": "../src/assets/icons"
+    },
+    "graphics": {
+      "active": true,
+      "watchIt": true,
+      "cwd": "../src/app",
+      "src": [
+        "**/**/*.{jpg,jpeg,gif,png,ico}"
+      ],
+      "dest": "../src/assets/graphics"
+    },
+    "scripts": {
+      "active": true,
+      "watchIt": true,
+      "cwd": "../src/app",
+      "src": [
+        "**/**/*.js"
+      ],
+      "dest": "../src/assets/scripts",
+      "options": {
+        "filename": "main.js"
+      }
+    },
+    "styles": {
+      "active": true,
+      "watchIt": true,
+      "cwd": "../src/app",
+      "src": [
+        "**/**/*.{sass,scss}"
+      ],
+      "dest": "../src/assets/styles",
+      "options": {
+        "browserSupport": [
+          "ie >= 10",
+          "last 1 Firefox version",
+          "last 1 Chrome version",
+          "last 1 Opera version"
+        ]
+      }
+    },
+    "svg": {
+      "active": true,
+      "watchIt": true,
+      "cwd": "../src/app",
+      "src": [
+        "**/**/*.svg",
+        "!**/**/icons/*.svg",
+        "!**/**/*icon*.svg"
+      ],
+      "dest": "../src/assets/svg"
+    },
+    "browser": {
+      "active": true,
+      "options": {
+        "port": 9999,
+        "online": true,
+        "notify": false
+      }
+    },
+    "ngServe": {
+      "active": true,
+      "env": ["dev"],
+      "options": {
+        "command": "cd .. && ng serve --open"
+      }
+    }
+  }
+}

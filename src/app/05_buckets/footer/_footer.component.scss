@@ -1,0 +1,22 @@
+
+.footer {
+
+	margin: 0 auto;
+
+}
+
+.footer__inner {
+
+	padding: gap('xxlarge') gap('xxsmall');
+
+	font-size: 11px;
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+
+	color: color('neutrals-4');
+
+	a { color: color('neutrals-3'); text-decoration: none; transform: color 250ms; }
+	a:hover { color: color('action'); }
+
+}

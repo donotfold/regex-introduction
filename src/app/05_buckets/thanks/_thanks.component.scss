@@ -1,0 +1,33 @@
+
+.thanks {
+
+	max-width: section('small');
+	margin: 0 auto;
+	padding: gap('medium') 0 0 0;
+
+}
+
+.thanks__inner {
+
+	text-align: center;
+
+}
+
+.thanks__title {
+
+	font-family: font('titles');
+	margin-bottom: gap('small');
+
+}
+
+.thanks__body {
+
+	font-size: fontSize('medium');
+	line-height: 1.4;
+
+	p { margin-bottom: gap('small'); }
+
+	a { transition: color 250ms; }
+	a:hover { color: color('action'); }
+
+}

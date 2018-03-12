@@ -1,0 +1,20 @@
+
+<div class="demos">
+	<div class="demos__inner">
+
+		<h1 class="demos__title">Demo's</h1>
+		<!-- p class="demos__body">
+			There are tons of regex demo's out there, I've selected a couple that are 'readable'
+			and in my opinion good examples to learn how they are built.
+		</p -->
+
+		<ul class="demos__navigation">
+			<li class="demos__navigation__item" *ngFor="let demoK of demos">
+				<a [class]="'demos__navigation__link' + (demo && demo.slug === demoK.slug ? ' active': '')" (click)="openDemo(demoK)">{{ demoK.title }}</a>
+			</li>
+		</ul>
+
+		<demo-component class="demos__demo" *ngIf="demo" [demo]="demo" [step]="step"></demo-component>
+
+	</div>
+</div>

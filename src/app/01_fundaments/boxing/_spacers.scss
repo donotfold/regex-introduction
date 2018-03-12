@@ -1,0 +1,77 @@
+/**
+ *
+ * BOXING: SPACERS
+ *
+ */
+
+.spacer--in {
+	padding-top: gap('small'); padding-bottom: gap('small');
+
+	@include media('medium') {
+		padding-top: gap('large'); padding-bottom: gap('large');
+	}
+
+	@include media('large') {
+		padding-top: gap('xlarge'); padding-bottom: gap('xlarge');
+	}
+}
+
+.spacer--in-top {
+	padding-top: gap('small');
+
+	@include media('medium') {
+		padding-top: gap('large');
+	}
+
+	@include media('large') {
+		padding-top: gap('xlarge');
+	}
+}
+
+.spacer--in-bottom {
+	padding-bottom: gap('small');
+
+	@include media('medium') {
+		padding-bottom: gap('large');
+	}
+
+	@include media('large') {
+		padding-bottom: gap('xlarge');
+	}
+}
+
+.spacer--out {
+	margin-top: gap('small'); margin-bottom: gap('small');
+
+	@include media('medium') {
+		margin-top: gap('large'); margin-bottom: gap('large');
+	}
+
+	@include media('large') {
+		margin-top: gap('xlarge'); margin-bottom: gap('xlarge');
+	}
+}
+
+.spacer--out-top {
+	margin-top: gap('small');
+
+	@include media('medium') {
+		margin-top: gap('large');
+	}
+
+	@include media('large') {
+		margin-top: gap('xlarge');
+	}
+}
+
+.spacer--out-bottom {
+	margin-bottom: gap('small');
+
+	@include media('medium') {
+		margin-bottom: gap('large');
+	}
+
+	@include media('large') {
+		margin-bottom: gap('xlarge');
+	}
+}
